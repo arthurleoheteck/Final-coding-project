@@ -1,3 +1,8 @@
+
+"""The profitloss_function takes a forex parameter and computes the difference between the net profit of consecutive days.
+If the net profit on a certain day is lower than the previous day, 
+the day and the difference in profit are stored. The result is printed and appended to the summary_report.txt file."""
+
 #Profit & Loss csv : The program will compute the difference in the net profit column if net profit on the current day is lower than the previous day.
 
 #Cash-On-Hand csv: The program will compute the difference in Cash-on-Hand if the current day is lower than the previous day.

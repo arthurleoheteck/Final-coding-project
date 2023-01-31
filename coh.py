@@ -59,6 +59,6 @@ def coh_function(forex):
         fileReport.write(txt_return )
         fileReport.close()     
    
-# modular for  individual coding and testing
+#modular for  individual coding and testing
 #coh_function(1)
 

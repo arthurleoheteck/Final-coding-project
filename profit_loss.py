@@ -64,4 +64,5 @@ def profitloss_function(forex):
     return 
 
 # modular for  individual coding and testing
-#profitloss_function(1)
+#
+profitloss_function(1)

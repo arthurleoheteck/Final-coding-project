@@ -26,7 +26,7 @@ def overhead_function(forex):
         count = 0
         for row in reader: 
         
-            #check if row is empty. If can be a return or new line. 
+            #check if row is empty. This row can be a new line. 
             if not row:
                 continue
 
@@ -55,4 +55,4 @@ def overhead_function(forex):
 
     
 # for individual coding and testing     
-overhead_function(1)
+#overhead_function(1)

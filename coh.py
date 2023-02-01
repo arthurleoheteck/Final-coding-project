@@ -1,3 +1,11 @@
+"""
+This is a Python script that computes the difference in cash on hand between days if the current day's value is lower than the previous day's, 
+based on data from a "Cash on Hand" .csv file. The result is appended to a "summary_report.txt" file and printed to the console. 
+The coh_function calculates the cash deficit using a single argument forex and formats the result as a string.
+"""
+
+
+
 #Cash-On-Hand csv: The program will compute the difference in Cash-on-Hand if the current day is lower than the previous day.
 from pathlib import Path
 import csv

@@ -1,5 +1,5 @@
 
-"""The profitloss_function takes a forex parameter and computes the difference between the net profit of consecutive days.
+""" The profitloss_function takes a forex parameter and computes the difference between the net profit of consecutive days.
 If the net profit on a certain day is lower than the previous day, 
 the day and the difference in profit are stored. The result is printed and appended to the summary_report.txt file."""
 
@@ -41,17 +41,18 @@ def profitloss_function(forex):
             profit.append(int(row[4]))
             
             if count > 0:                 
-                # Previouse day profit is greater than current. Then calculate the profit deficit and store the day of the deficit
+                # if Previous day profit is greater than current. Then calculate the profit deficit and store the day of the deficit
                 if profit[count-1] > profit[count] :
                        day_deficit.append(row[0])
-                       profit_deficit.append(profit[count-1] -  int(row[4])) 
+                       profit_deficit.append(profit[count-1] - int(row[4])) 
                        
             count = count + 1          
         
         file.close()
                     
     deficit_count = len(day_deficit)
-    if deficit_count == 0 :    
+    #if count is not 0 the code uses a while loop to iterate "deficit_count" number of times and concatenates a string "txt_return" to each iteration
+    if deficit_count == 0:    
         txt_return = "[NET PROFIT SURPLUS] NET PROFIT ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY\n"
     else:
         i = 0
@@ -69,5 +70,4 @@ def profitloss_function(forex):
     return 
 
 # modular for  individual coding and testing
-#
-#profitloss_function(1)
+# profitloss_function(1)

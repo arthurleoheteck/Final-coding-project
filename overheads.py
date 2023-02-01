@@ -1,20 +1,20 @@
 
 """This program will find the highest overhead category in a CSV file named "Overhead.csv" located in the "csv_reports" directory.
-The program reads the CSV file, compares the overhead values in each row, and stores the category with the highest overhead
-Output: The highest overhead category and its value are printed and saved in a text file
+The program reads the CSV file, compares the overhead values in each row, and stores the category with the highest overhead.
+Output: The highest overhead category and its value are printed and saved in a text file.
 """
 
-#Overheads csv: The program will find the highest overhead category.
+# Overheads csv: The program will find the highest overhead category.
 
 from pathlib import Path
 import csv
 # csv file and path
-fp = Path.cwd()/"csv_reports/Overheads.csv"
+fp = Path.cwd()/"csv_reports/Overhead.csv"
 fp_report = Path.cwd()/"summary_report.txt"
 
 def overhead_function(forex):
 
-    # read the csv file to append profit and quantity from the csv.
+    # It will read the csv file to append the profit and quantity from the csv.
     with fp.open(mode="r", encoding="UTF-8", newline="") as file:
         reader = csv.reader(file)
         next(reader) # skip header
@@ -22,22 +22,22 @@ def overhead_function(forex):
         max_category = ""
         max_overheads = 0.00
 
-        # read each record and store the only highest overheads and category
+        # Reads each record and stores only the highest overheads and category.
         count = 0
         for row in reader: 
         
-            #check if row is empty. This row can be a new line. 
+            # Checks whether the row is empty, if not, that row can be a new line.
             if not row:
                 continue
 
-            #Store the first record as max category and max overheads
-            #row[0] for column 0 category, row[1] for column 1 overheads
+            # Stores the first record as max catergory and max overheads.
+            # Row[0] for colume 0 category, row[1] for column 1 overheads.
             if count == 0:
                 max_category    = row[0]
                 max_overheads   = float(row[1])
                 count = count + 1
             
-            #compare and keep the maximum category and overheads
+            # Compares and keeps the maximum category and overheads.
             if  float(row[1]) > max_overheads:
                 max_category    = row[0]
                 max_overheads   = float(row[1])
@@ -48,11 +48,11 @@ def overhead_function(forex):
     print(txt_return)
     
     
-    #append the result to the summary_report.txt
+    # Append the result to the summary_report.txt
     with fp_report.open(mode="w", encoding="UTF-8", newline="") as fileReport:
             fileReport.write(txt_return)
             fileReport.close()   
 
     
-# for individual coding and testing     
-#overhead_function(1)
+# For individual coding and testing.     
+# overhead_function(1)

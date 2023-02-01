@@ -51,6 +51,7 @@ def profitloss_function(forex):
         file.close()
                     
     deficit_count = len(day_deficit)
+    #if count is not 0 the code uses a while loop to iterate "deficit_count" number of times and concatenates a string "txt_return" to each iteration
     if deficit_count == 0 :    
         txt_return = "[NET PROFIT SURPLUS] NET PROFIT ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY\n"
     else:
@@ -69,5 +70,4 @@ def profitloss_function(forex):
     return 
 
 # modular for  individual coding and testing
-#
-#profitloss_function(1)
+# profitloss_function(1)

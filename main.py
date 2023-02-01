@@ -1,7 +1,7 @@
 import coh, overheads, profit_loss
 
 #import the collaborate code and modulizrized python files
-# each api.py, coh.py, overheads.py, profit_loss.py can be run separately for each member to contribute to the project
+# each  coh.py, overheads.py, profit_loss.py can be run separately for each member to contribute to the project
 """
 This code imports the modules coh, overheads, and profit_loss and runs their respective functions, coh_function, overhead_function,
  and profitloss_function, with the variable forex passed as an argument. The variable forex is set to 1 and represents the exchange 

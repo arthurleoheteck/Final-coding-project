@@ -9,7 +9,7 @@ Output: The highest overhead category and its value are printed and saved in a t
 from pathlib import Path
 import csv
 # csv file and path
-fp = Path.cwd()/"csv_reports/Overhead.csv"
+fp = Path.cwd()/"csv_reports/Overheads.csv"
 fp_report = Path.cwd()/"summary_report.txt"
 
 def overhead_function(forex):

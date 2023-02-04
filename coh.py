@@ -15,18 +15,18 @@ fp_report = Path.cwd()/"summary_report.txt"
 
 def coh_function(forex):
 
-    # read the csv file to append profit and quantity from the csv.
+    # programme will read the csv file to append profit and quantity from the csv.
     with fp.open(mode="r", encoding="UTF-8", newline="") as file:
         reader = csv.reader(file)
         # skip header of the table first row
         next(reader) 
 
-        # create 3 empty lists to store profit and quantity by each cluster
-        # day to store all the days
-        # coh to store all the profit
-        # day_deficit stored
-        # coh_deficit stored
-        # count to the total record 
+        # creates 3 empty lists to store profit and quantity by each cluster
+        # empty list 'day' to store all the days
+        # empty list 'cash on hand' to store all the profit
+        # empty list day_deficit stored
+        # empty list coh_deficit stored
+        # programme will count to the total record 
         # txt_return to return the outcome of the string
         day = [] 
         coh = []
@@ -43,7 +43,7 @@ def coh_function(forex):
             coh.append(float(row[1]))
             
             if count > 0:     
-                # Previouse day profit is greater than current. Then calculate the profit deficit and store the day of the deficit
+                # Previous day profit is greater than current. Programme will then calculate the profit deficit and store the day of the deficit in text file
                 if coh[count-1] > coh[count] :
                        day_deficit.append(row[0])
                        coh_deficit.append( coh[count-1]  - float(row[1]))                        
@@ -62,7 +62,7 @@ def coh_function(forex):
             i = i + 1
      
     print(txt_return)
-    #append the result to the summary_report.txt
+    #programme will then append the final results to the summary_report.txt
     with open(fp_report,'a') as fileReport:
         fileReport.write(txt_return )
         fileReport.close()     
